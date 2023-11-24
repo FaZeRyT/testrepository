@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1 style="color: white;"></h1>
+    <h2>
+        Перед вами 3 кнопки:
+    </h2>
+    <button id="btn1" onclick="btn1()" style="visibility: hidden;">Включить свет</button>
+    <button id="btn2" onclick="btn2()" style="visibility: hidden;">Рыба</button>
+    <button id="btn3" onclick="btn3()" style="visibility: hidden;">Важно!!!</button>
+    <div>
+        Lorem ipsum dolor sit amet, <br>
+        consectetur adipiscing elit, <br>
+        sed do eiusmod tempor incididunt <br>
+        ut labore et dolore magna aliqua. <br>
+    </div>
+</body>
+</html>
+<style>
+    div {
+        outline-style: solid;
+        outline-width: 5px;
+        margin: 5px;
+    }
+</style>
+<script>
+    
+    function btn1 (){
+        if ($('body').css('background-color') == 'rgba(0, 0, 0, 0)') {
+            $('body').css('background-color', 'black');
+            $('#btn1').html('Включить свет'); 
+            $('*').css('visibility', 'hidden')
+            $('#btn1').css('visibility', 'visible')
+            // $('#btn2').css('visibility', 'hidden')
+            // $('#btn3').css('visibility', 'hidden')
+        } else {
+            $('body').css('background-color', 'rgba(0, 0, 0, 0)');
+            $('#btn1').html('Выключить свет');
+            $('*').css('visibility', 'visible')
+        }
+    }
+    function btn2 (){
+        alert(
+            "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠛⠛⠛⠛⠻⢿ "+
+            "\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⣉⣠⣤⣶⣶⣶⣿⣿⣿⣿⣶⣤ "+
+            "\n⣿⣿⣿⣿⣿⡿⠋⢁⣴⣦⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⢿⣿⣿ "+
+            "\n⣿⣿⣿⣿⡿⠄⣰⡿⠛⠛⠋⠉⠉⠉⠉⠉⠙⠛⠛⠛⢀⣄⠄⠈⠙ "+
+            "\n⣿⣿⣿⡿⢃⣴⡏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⣿⠄⠄⠄ "+
+            "\n⣿⣿⠁⣴⣿⣿⣿⣦⣤⣄⣀⣀⣀⣀⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ "+
+            "\n⣿⣿⠄⣿⡟⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⢿⠄⠄⠄⠄⠄⠄⠄⠄⠄ "+
+            "\n⣿⣿⣦⡙⠿⣶⣶⣶⣶⣶⣶⣶⣶⣶⣾⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄ "+
+            "\n⣿⣿⣿⣿⣷⣄⡉⠉⠉⠉⠉⠉⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ "+
+            "\n⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ "+
+            "\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⣀⣀⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ "+
+            "\n⠀⡶⠒⠲⣄⠀⠀⡆⠀⠀⠀⠀⢰⡆⠀⢰⡖⠒⠒⠂ ⠀⠀⠀⡰⣆⠀⠀"+
+            "\n⠀⡇⠀⠀⣸⠀⠀⣇⣀⡀⠀⠀⢸⡇⠀⢸⡇⠀⠀⠀⠀ ⠀⢠⠇⢸⡄ "+
+            "\n⠀⡷⠒⠚⠁⠀⠀⡏⠉⠉⢳⡀⢸⡇⠀⢸⡏⠉⠙⢦⠀⠀⣞⣀⣀⣷ "+
+            "\n⠀⡇⠀⠀⠀⠀⠀⣇⣀⣀⡼⠁⢸⡇⠀⢸⣇⣀⣀⡼⠀⣸⠁⠀⠀⠘⡇"+
+            "\n⠀⠁⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠁⠀⠀⠉⠉⠁⠀⠀⠁⠀⠀⠀⠀⠉ "
+        );
+    }
+    // $('div').html('!!!')
+    $('body').css('background-color', 'black')
+    function btn3(){
+        $('body').html('<img src="photo.jpg" width="400px" height="400px">')
+    }
+    setTimeout(() => {
+        $('h1').html("Вокруг вас темно.")
+    }, 3000);
+    setTimeout(() => {
+        $('h1').html("Вы нащупываете кнопку...")
+    }, 6000);
+    setTimeout(() => {
+        $('h1').html("")
+    }, 8000);
+    setTimeout(() => {
+        $('#btn1').css('visibility', 'visible')
+    }, 10000);
+</script>
